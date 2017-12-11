@@ -1,0 +1,5 @@
+.idea
+.nginx
+/node_modules/
+/libs/
+/vendor/

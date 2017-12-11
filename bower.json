@@ -1,0 +1,14 @@
+{
+  "name": "dev",
+  "description": "dev",
+  "main": "index.html",
+  "devDependencies": {
+    "jquery": "https://github.com/jquery/jquery.git#^3.1.1",
+    "magnific-popup": "https://github.com/dimsemenov/Magnific-Popup.git#^1.1.0",
+    "normalize-css": "https://github.com/necolas/normalize.css.git#^5.0.0",
+    "jquery-validation": "https://github.com/jquery-validation/jquery-validation.git#^1.16.0",
+    "jquery-form": "https://github.com/malsup/form.git#^3.46.0",
+    "sass-mediaqueries": "^1.6.1",
+    "jquery.easing": "https://github.com/gdsmith/jquery.easing.git#^1.4.1"
+  }
+}

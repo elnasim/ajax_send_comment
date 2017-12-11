@@ -1,0 +1,173 @@
+@import "mixins/FontFace"
+@import "fonts"
+@import "media-queries"
+
+$color-red: rgba(#FF0000, 1)
+$color-light-red: rgba(#ffd7d7, 1)
+
+$color-blue: rgba(#0000FF, 1)
+$color-light-blue: rgba(#c5c7ff, 1)
+
+$color-green: rgba(#008000, 1)
+$color-light-green: rgba(#5e8060, 1)
+
+*
+  font-family: 'Roboto'
+  font-size: 16px
+  font-weight: 400
+  font-style: normal
+
+body
+  position: relative
+
+h1, h2, h3, h4, h5, h6
+  font-weight: 600
+
+span
+  &.h1, &.h2, &.h3, &.h4, &.h5, &.h6
+    font-weight: 600
+  &.h1
+    font-size: 36px
+  &.h2
+    font-size: 30px
+  &.h3
+    font-size: 24px
+  &.h4
+    font-size: 18px
+  &.h5
+    font-size: 14px
+  &.h6
+    font-size: 12px
+
+label
+  font-weight: 600
+
+sup.required
+  color: $color-red
+
+.img-responsive
+  max-width: 100%
+  display: block
+
+.text-red
+  color: #be393b
+
+.header
+  background-color: #2d3136
+  padding: 60px 0 90px
+
+.logo-link
+  display: inline-block
+
+.header-logo
+  width: 308px
+
+.logo
+  display: inline-block
+
+.contact-icon
+  margin: 100px 0 20px
+
+.input-wrapper
+  width: 100%
+  margin-bottom: 60px
+
+.input-field
+  width: 100%
+  border: 2px solid rgba(#fff, .52)
+  opacity: .28
+  background-color: #2f3136
+  border-radius: 4px
+  color: #d7d7d7
+  padding: 15px 20px
+  font-size: 30px
+  transition: all .25s ease
+  &:focus
+    opacity: 1
+
+.textarea-wrapper
+  width: 100%
+
+.textarea-field
+  width: 100%
+  min-height: 273px
+
+.label-text
+  color: #d7d7d7
+  font-weight: 400
+  font-size: 35px
+  display: inline-block
+  margin-bottom: 5px
+
+.label-star
+  font-size: 33px
+  font-weight: 500
+
+.button
+  background-color: #be393b
+  border: none
+  font-size: 36px
+  font-weight: 400
+  color: #ffffff
+  border-radius: 4px
+  padding: 10px 15px
+  width: 230px
+  &:hover
+    cursor: pointer
+
+.comments
+  padding: 140px 0
+  min-height: 500px
+
+.comments-head
+  text-align: center
+  font-size: 43px
+  margin-bottom: 125px
+
+.item-comment__wrap
+  &:nth-child(even)
+    .item-comments__head
+      background-color: #58ad52
+    .item-comments
+      background-color: rgba(#58ad52, .15)
+
+.item-comments
+  background-color: #e9eef3
+  text-align: center
+  margin: 0 25px 50px
+
+.item-comments__head
+  background-color: #4b596c
+  color: #ffffff
+  font-size: 34px
+  padding: 10px 15px
+
+.item-comments__content
+  padding: 50px 15px 15px
+  min-height: 300px
+
+.item-comments__email
+  font-size: 34px
+  font-weight: 500
+  color: #6d737b
+  margin-bottom: 30px
+
+.item-comments__message
+  font-size: 30px
+  line-height: 30px
+  color: #767582
+
+.footer
+  background-color: #292d33
+  padding: 30px 0
+
+.footer-logo
+  width: 246px
+
+.socials
+  text-align: right
+
+.social-link
+  color: #ffffff
+
+@import "forms"

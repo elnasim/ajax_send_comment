@@ -50,6 +50,7 @@ gulp.task('css-libs', function() {
     return gulp.src([
         bowerLibsPath + 'normalize-css/normalize.css',                      // Normalize
         bowerLibsPath + 'bootstrap-4.0.0-beta.2/dist/css/bootstrap.min.css',             // Bootstrap
+        bowerLibsPath + 'font-awesome-4.7.0/css/font-awesome.min.css',             // font-awesome
     ])
         .pipe(concat('libs.min.css'))
         .pipe(cssnano())

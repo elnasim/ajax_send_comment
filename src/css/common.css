@@ -99,6 +99,12 @@ sup.required {
   width: 308px;
 }
 
+@media only screen and (max-width: 479px) {
+  .header-logo {
+    width: 100%;
+  }
+}
+
 .logo {
   display: inline-block;
 }
@@ -173,6 +179,12 @@ sup.required {
   min-height: 500px;
 }
 
+@media only screen and (max-width: 767px) {
+  .comments {
+    padding: 50px 0;
+  }
+}
+
 .comments-head {
   text-align: center;
   font-size: 43px;
@@ -190,7 +202,7 @@ sup.required {
 .item-comments {
   background-color: #e9eef3;
   text-align: center;
-  margin: 0 25px 50px;
+  margin: 0 15px 50px;
 }
 
 .item-comments__head {
@@ -231,8 +243,50 @@ sup.required {
   text-align: right;
 }
 
+@media only screen and (max-width: 575px) {
+  .socials {
+    text-align: left;
+    margin-top: 25px;
+  }
+}
+
 .social-link {
-  color: #ffffff;
+  color: #656566;
+  font-size: 22px;
+  background-color: #2f3338;
+  width: 45px;
+  height: 45px;
+  border: 3px solid #454648;
+  -webkit-border-radius: 100%;
+          border-radius: 100%;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 50px;
+  -webkit-transition: all .25s ease;
+  transition: all .25s ease;
+}
+
+.social-link:hover {
+  color: #7e7e80;
+  text-decoration: none;
+  border-color: #5e5f62;
+}
+
+@media only screen and (max-width: 575px) {
+  .social-link {
+    margin-left: 0;
+    margin-right: 15px;
+  }
 }
 
 form.validate input.error, form.validate checkbox.error, form.validate textarea.error {

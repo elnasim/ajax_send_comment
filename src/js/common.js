@@ -18,7 +18,7 @@ $(document).ready(function () {
         alert('сообщение отправлено');
 
         $('.comments-wrapper').append('' +
-            '       <div class="col-4 item-comment__wrap">\n' +
+            '       <div class="col-lg-4 col-md-6 item-comment__wrap">\n' +
             '          <div class="item-comments">\n' +
             '            <div class="item-comments__head">' + name + '</div>\n' +
             '            <div class="item-comments__content">\n' +

@@ -61,6 +61,8 @@ sup.required
 
 .header-logo
   width: 308px
+  @include max-screen(479px)
+    width: 100%
 
 .logo
   display: inline-block
@@ -118,6 +120,8 @@ sup.required
 .comments
   padding: 140px 0
   min-height: 500px
+  @include max-screen(767px)
+    padding: 50px 0
 
 .comments-head
   text-align: center
@@ -134,7 +138,7 @@ sup.required
 .item-comments
   background-color: #e9eef3
   text-align: center
-  margin: 0 25px 50px
+  margin: 0 15px 50px
 
 .item-comments__head
   background-color: #4b596c
@@ -166,8 +170,30 @@ sup.required
 
 .socials
   text-align: right
+  @include max-screen(575px)
+    text-align: left
+    margin-top: 25px
 
 .social-link
-  color: #ffffff
+  color: #656566
+  font-size: 22px
+  background-color: #2f3338
+  width: 45px
+  height: 45px
+  border: 3px solid #454648
+  border-radius: 100%
+  display: inline-flex
+  justify-content: center
+  align-items: center
+  margin-left: 50px
+  transition: all .25s ease
+  &:hover
+    color: lighten(#656566, 10%)
+    text-decoration: none
+    border-color: lighten(#454648, 10%)
+  @include max-screen(575px)
+    margin-left: 0
+    margin-right: 15px
+
 
 @import "forms"

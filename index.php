@@ -28,7 +28,7 @@ include_once 'db_connect.php';
   <div class="container">
 
     <div class="row">
-      <div class="col-4">
+      <div class="col-12">
         <a href="#" class="logo-link">
           <img src="dist/img/logo.png" class="logo header-logo">
         </a>
@@ -36,7 +36,7 @@ include_once 'db_connect.php';
     </div>
 
     <div class="row justify-content-center">
-      <div class="col-3">
+      <div class="col-lg-3 col-md-4 col-7">
         <img src="dist/img/contact-icon.png" alt="" class="contact-icon img-responsive">
       </div>
     </div>
@@ -45,7 +45,7 @@ include_once 'db_connect.php';
 
       <div class="row justify-content-between">
 
-        <div class="col-5">
+        <div class="col-lg-5 col-md-12">
           <label class="input-wrapper">
             <span class="label-text">Имя <span class="text-red align-top label-star">*</span></span>
             <input type="text" class="input-field" name="name">
@@ -56,7 +56,7 @@ include_once 'db_connect.php';
           </label>
         </div>
 
-        <div class="col-md-6">
+        <div class="col-lg-6 col-md-12">
           <label class="textarea-wrapper">
             <span class="label-text">Комментарий <span class="text-red align-top label-star">*</span></span>
             <textarea class="input-field textarea-field" name="message"></textarea>
@@ -95,7 +95,7 @@ include_once 'db_connect.php';
       while ($comment = mysqli_fetch_assoc($comments)) {
         ?>
 
-        <div class="col-4 item-comment__wrap">
+        <div class="col-lg-4 col-md-6 item-comment__wrap">
           <div class="item-comments">
             <div class="item-comments__head"><?php echo $comment['name'] ?></div>
             <div class="item-comments__content">
@@ -117,16 +117,16 @@ include_once 'db_connect.php';
 
 <footer class="footer">
   <div class="container">
-    <div class="row justify-content-between">
+    <div class="row justify-content-between align-items-center">
 
-      <div class="col-md-3">
-        <img src="dist/img/logo.png" class="logo footer-logo">
+      <div class="col-sm-6 col-12">
+        <a href="#"><img src="dist/img/logo.png" class="logo footer-logo"></a>
       </div>
 
-      <div class="col-md-2">
+      <div class="col-sm-6 col-12">
         <div class="socials">
-          <a href="#" class="social-link">1</a>
-          <a href="#" class="social-link">2</a>
+          <a href="#" class="social-link"><i class="fa fa-vk"></i></a>
+          <a href="#" class="social-link"><i class="fa fa-facebook"></i></a>
         </div>
       </div>
 

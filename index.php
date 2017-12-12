@@ -82,11 +82,10 @@ include_once 'db_connect.php';
     <div class="row">
       <div class="col-12">
         <div class="comments-head">Выводим комментарии</div>
-        <button class="get_comments">Получить комментарии</button>
       </div>
     </div>
 
-    <div class="row">
+    <div class="row comments-wrapper">
 
       <?php
       $comments = mysqli_query($connection, "SELECT * FROM `comments` ");

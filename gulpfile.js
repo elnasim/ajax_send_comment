@@ -38,7 +38,6 @@ gulp.task('browser-sync-self', function() {
 gulp.task('js-libs', function() {
     return gulp.src([
         bowerLibsPath + 'jquery/dist/jquery.min.js',                            // jQuery
-        bowerLibsPath + 'bootstrap-4.0.0-beta.2/dist/js/bootstrap.min.js',      // Bootstrap
         bowerLibsPath + 'jquery-validation/dist/jquery.validate.min.js',        // jQuery Validation
         bowerLibsPath + 'jquery-validation/dist/additional-methods.min.js',     // jQuery Additional
         bowerLibsPath + 'magnific-popup/dist/jquery.magnific-popup.min.js',     // Magnific pop-up

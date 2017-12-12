@@ -35,8 +35,8 @@ include_once 'db_connect.php';
       </div>
     </div>
 
-    <div class="row justify-content-center">
-      <div class="col-lg-3 col-md-4 col-7">
+    <div class="row justify-content-center justify-content-lg-start">
+      <div class="col-lg-3 col-md-4 col-7 offset-lg-4">
         <img src="dist/img/contact-icon.png" alt="" class="contact-icon img-responsive">
       </div>
     </div>

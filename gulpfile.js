@@ -37,8 +37,8 @@ gulp.task('browser-sync-self', function() {
 // Build libs.min.js ( Compiling all .js libraries files )
 gulp.task('js-libs', function() {
     return gulp.src([
-        bowerLibsPath + 'jquery/dist/jquery.min.js',                            // jQuery
-        bowerLibsPath + 'jquery-validation/dist/jquery.validate.min.js',        // jQuery Validation
+      libsPath + 'jquery/dist/jquery.min.js',                            // jQuery
+      libsPath + 'jquery-validation/dist/jquery.validate.min.js',        // jQuery Validation
     ])
         .pipe(concat('libs.min.js'))
         .pipe(uglify())
@@ -48,9 +48,9 @@ gulp.task('js-libs', function() {
 // Build libs.min.css ( Compiling all .css libraries files )
 gulp.task('css-libs', function() {
     return gulp.src([
-        bowerLibsPath + 'normalize-css/normalize.css',                      // Normalize
-        bowerLibsPath + 'bootstrap-4.0.0-beta.2/dist/css/bootstrap.min.css',             // Bootstrap
-        bowerLibsPath + 'font-awesome-4.7.0/css/font-awesome.min.css',             // font-awesome
+      libsPath + 'normalize-css/normalize.css',                      // Normalize
+      libsPath + 'bootstrap-4.0.0-beta.2/dist/css/bootstrap.min.css',             // Bootstrap
+      libsPath + 'font-awesome-4.7.0/css/font-awesome.min.css',             // font-awesome
     ])
         .pipe(concat('libs.min.css'))
         .pipe(cssnano())
@@ -117,7 +117,7 @@ gulp.task('clear-dist', function() {
 // Common css
 gulp.task('common-css-dist', ['main-sass'], function() {
     gulp.src([ gulpSrcPath + 'css/common.css' ])
-        .pipe(cssnano({zindex: false}))
+        //.pipe(cssnano({zindex: false}))
         .pipe(rename('common.min.css'))
         .pipe(gulp.dest(distPath + 'css'))
         .pipe(browserSync.stream());
@@ -126,7 +126,7 @@ gulp.task('common-css-dist', ['main-sass'], function() {
 // Common js
 gulp.task('common-js-dist', ['common-js'], function() {
     gulp.src([ gulpSrcPath + 'js/common.js' ])
-        .pipe(uglify())
+        //.pipe(uglify())
         .pipe(rename('common.min.js'))
         .pipe(gulp.dest(distPath + 'js'))
         .pipe(browserSync.stream());

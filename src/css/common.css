@@ -203,6 +203,7 @@ sup.required {
   background-color: #e9eef3;
   text-align: center;
   margin: 0 15px 50px;
+  word-wrap: break-word;
 }
 
 .item-comments__head {

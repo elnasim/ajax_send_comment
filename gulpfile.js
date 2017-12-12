@@ -39,9 +39,6 @@ gulp.task('js-libs', function() {
     return gulp.src([
         bowerLibsPath + 'jquery/dist/jquery.min.js',                            // jQuery
         bowerLibsPath + 'jquery-validation/dist/jquery.validate.min.js',        // jQuery Validation
-        bowerLibsPath + 'jquery-validation/dist/additional-methods.min.js',     // jQuery Additional
-        bowerLibsPath + 'magnific-popup/dist/jquery.magnific-popup.min.js',     // Magnific pop-up
-        bowerLibsPath + 'jquery-form/jquery.form.js',                           // jQuery form
     ])
         .pipe(concat('libs.min.js'))
         .pipe(uglify())

@@ -41,7 +41,7 @@ include_once 'db_connect.php';
       </div>
     </div>
 
-    <form action="add_comment.php" class="send-form" method="get">
+    <form id="send-form" action="add_comment.php" class="send-form validate" method="get">
 
       <div class="row justify-content-between">
 
@@ -67,7 +67,7 @@ include_once 'db_connect.php';
 
       <div class="row justify-content-end">
         <div class="col-12 d-flex justify-content-end">
-          <button class="button">Записать</button>
+          <button type="submit" class="button">Записать</button>
         </div>
       </div>
 

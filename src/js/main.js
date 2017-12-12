@@ -2,6 +2,36 @@ $(document).ready(function () {
 
   var messageForm = $(".send-form");
 
+  function sendMessage() {
+
+    var name = $("input[name='name']").val();
+    var email = $("input[name='email']").val();
+    var message = $("textarea[name='message']").val();
+
+    $.ajax({
+      type: 'GET',
+      url: 'add_comment.php',
+      data: messageForm.serialize(),
+      resetForm: true,
+
+      success: function () {
+        alert('сообщение отправлено');
+
+        $('.comments-wrapper').append('' +
+            '       <div class="col-4 item-comment__wrap">\n' +
+            '          <div class="item-comments">\n' +
+            '            <div class="item-comments__head">' + name + '</div>\n' +
+            '            <div class="item-comments__content">\n' +
+            '              <div class="item-comments__email">' + email + '</div>\n' +
+            '              <div class="item-comments__message">' + message + '</div>\n' +
+            '            </div>\n' +
+            '          </div>\n' +
+            '        </div>');
+      }
+
+    });
+  }
+
   messageForm.validate({
     rules: {
       name: {
@@ -29,37 +59,12 @@ $(document).ready(function () {
         required: "Введите сообщение",
         minlength: jQuery.validator.format("Минимальная длина сообщения {0} символов!")
       }
+    },
+
+    submitHandler: function () {
+      sendMessage();
     }
 
-  });
-
-  messageForm.submit(function () {
-    var th = $(this);
-    $.ajax({
-      type: 'GET',
-      url: 'add_comment.php',
-      data: th.serialize(),
-      success: function () {
-        alert('Сообщение отправлено');
-        var name = $("input[name='name']").val();
-        var email = $("input[name='email']").val();
-        var message = $("textarea[name='message']").val();
-        $('.comments-wrapper').append('' +
-            '       <div class="col-4 item-comment__wrap">\n' +
-            '          <div class="item-comments">\n' +
-            '            <div class="item-comments__head">' + name + '</div>\n' +
-            '            <div class="item-comments__content">\n' +
-            '              <div class="item-comments__email">' + email + '</div>\n' +
-            '              <div class="item-comments__message">' + message + '</div>\n' +
-            '            </div>\n' +
-            '          </div>\n' +
-            '        </div>');
-        setTimeout(function () {
-          th.trigger('reset');
-        }, 1000)
-      }
-    });
-    return false;
   });
 
 
